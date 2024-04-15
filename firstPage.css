@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #010257;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .page1 {
+    background-image: url('images/Noble\'s House.png'); /* Add the path to your background image for page 1 */
+  }
+  
+  .page2 {
+    background-image: url('images/Route\ to\ the\ Assassination.png'); /* Add the path to your background image for page 2 */
+  }
+  
+  .page3 {
+    background-image: url('images/Remote\ Cabin\ in\ the\ Forest.png'); /* Add the path to your background image for page 3 */
+  }
+  
+  
+  .page {
+    display: none; /* Hide all pages by default */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  /* Show the selected page */
+  input[type="radio"]:checked + .page {
+    display: block;
+  }
+  
+  .character {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .story {
+    width: 60%;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .navigation {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navigation label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for checked navigation button */
+  .navigation label:hover,
+  input[type="radio"]:checked + .page + .navigation label {
+    background-color: #666;
+  }
+  
